@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% block site_metas %}
+      <title>Baba Iron and cement store</title>
+      <link rel="shortcut icon" type="image/jpg" href="static/main/images/favicon.jpg"/>
+      <meta name="keywords" content="cement,tile,wall-tile,floor-tile">
+      <meta name="description" content="Bawa Iron And Cement Store - Good quality building material is available here ">
+      <meta name="author" content="">
+      {% endblock %}
+
+
+         <!-- Google Tag Manager -->
+         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-NZN4N26');</script>
+         <!-- End Google Tag Manager -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175556091-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-175556091-1');
+        {% block google_tags_head %}
+        {% endblock %}
+      </script>
+
+
+      {% include "partials/basic_metas.html" %}
+      {% include "partials/css_cdn.html" %}
+      {% include "partials/js_cdn.html" %}
+   </head>
+   <body {% if request.url in ["/", "/index.html"] %} id="home_page" class="home_page" {% else %} id="inner_page" {% endif %}>
+
+
+         <!-- Google Tag Manager (noscript) -->
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZN4N26"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+         <!-- End Google Tag Manager (noscript) -->
+
+      {% include "partials/header.html" %}
+      {% include "partials/message.html" %}
+
+        {% block container %}
+        {% endblock %}
+   {% include "partials/footer.html" %}
+   </body>
+</html>

@@ -1,1 +1,3 @@
 Flask==2.2.2
+Jinja2
+Flask-Mail==0.9.1

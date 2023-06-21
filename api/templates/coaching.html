@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block google_tags_head %}
+    {{ super() }}
+    gtag('event', 'products', { 'send_to': 'agency' });
+{% endblock %}
+{% block container %}
+      <!-- section -->
+      <section class="main_full inner_page">
+        <div class="container-fluid">
+          <div class="row">
+             <div class="full">
+               <h3>Products</h3>
+             </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+
+      <!-- section -->
+      <section class="layout_padding section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text_align_center">
+                  <div class="full heading_s1">
+                     <h2>Our Products</h2>
+                  </div>
+                  <div class="full">
+                     <p class="large">We are dealing in Various products like <b>Cement</b>, <b>Fabrication Iron Material</b>, <b> Tiles and SanitaryWare</b>, <b>Iron Hardware</b>, <b>Spare Parts</b></p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-4 text_align_center">
+                 <div class="cours">
+                   <img class="img-responsive" src="static/images/babairon/cement.jpg" alt="#" />
+                 </div>
+                 <h3>Cement</h3>
+                 <p>Good Quality Cement joins the bricks and prepare a home of dreams. Available brands are </p>
+                  <p>ACC, JK Super</p>
+              </div>
+
+              <div class="col-md-4 text_align_center">
+                 <div class="cours">
+                   <img class="img-responsive" src="static/images/babairon/iron_rod.png" alt="#" />
+                 </div>
+                 <h3>Iron rod</h3>
+                 <p>Gallant, Sidhabali, Mittal</p>
+              </div>
+
+              <div class="col-md-4 text_align_center">
+                 <div class="cours">
+                   <img class="img-responsive" src="static/images/babairon/sanitary-ware.jpg" alt="#" />
+                 </div>
+                 <h3>Sanitary ware</h3>
+                 <p>Somani, Trovant, Kajaria</p>
+              </div> 
+
+            </div>
+
+         </div>
+      </section>
+      <!-- end section -->
+     
+{% endblock %}

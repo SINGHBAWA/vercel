@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block google_tags_head %}
+    {{ super() }}
+    gtag('event', 'home', { 'send_to': 'agency' });
+{% endblock %}
+{% block container %}
+      <!-- section -->
+      <section class="main_full inner_page">
+        <div class="container-fluid">
+          <div class="row">
+             <div class="full">
+               <h3>Contact</h3>    
+             </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+    
+    <!-- section -->
+     <section class="layout_padding section">
+         <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                  <div class="contact_section margin_top_30">
+                     <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                           <div class="form_cont">
+                               <form action="/contact.html" method="POST">
+                                  <fieldset>
+                                     <div class="field">
+                                        <input type="text" name="name" required placeholder="Name">
+                                     </div>
+                                     <div class="field">
+                                        <input type="email" name="email" required placeholder="Email">
+                                     </div>
+                                     <div class="field">
+                                        <input type="number" maxlength="10" min="6000000000" max="9999999999" minlength="10" name="phone"  placeholder="Phone">
+                                     </div>
+                                     <div class="field">
+                                        <textarea placeholder="Message" required name="message"></textarea>
+                                     </div>
+                                     <div class="field center">
+                                       <button>Send</button>
+                                  </div></fieldset>
+                               </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+{% endblock %}
